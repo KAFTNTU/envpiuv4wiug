@@ -442,7 +442,7 @@ private fun ExampleCard(example: ExampleDef, onClick: () -> Unit, modifier: Modi
             .height(80.dp)
             .scale(scale)
             .clip(RoundedCornerShape(12.dp))
-            .background(Color(example.color.value and 0x33FFFFFFL or 0xFF000000L))
+            .background(Color((example.color.value and 0x33FFFFFFu or 0xFF000000u).toLong()))
             .border(1.dp, Color(example.color.value), RoundedCornerShape(12.dp))
             .clickable {
                 pressed = true
